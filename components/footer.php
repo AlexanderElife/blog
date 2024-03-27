@@ -1,3 +1,3 @@
 <footer class="footer">
-   &copy; copyright @ <?= date('Y'); ?> by <span>mr. web designer</span> | all rights reserved!
+   &copy; blogPersonal @ <?= date('Y'); ?> by <span>Grupo 8</span>
 </footer>

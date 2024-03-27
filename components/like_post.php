@@ -15,15 +15,15 @@ if(isset($_POST['like_post'])){
       if($select_post_like->rowCount() > 0){
          $remove_like = $conn->prepare("DELETE FROM `likes` WHERE post_id = ?");
          $remove_like->execute([$post_id]);
-         $message[] = 'removed from likes';
+         $message[] = 'Eliminado me gusta';
       }else{
          $add_like = $conn->prepare("INSERT INTO `likes`(user_id, post_id, admin_id) VALUES(?,?,?)");
          $add_like->execute([$user_id, $post_id, $admin_id]);
-         $message[] = 'added to likes';
+         $message[] = 'Añadido me gusta';
       }
       
    }else{
-         $message[] = 'please login first!';
+         $message[] = 'Inicie sesión';
    }
 
 }
