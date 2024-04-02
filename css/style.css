@@ -156,11 +156,11 @@ section{
    width: 100%;
 }
 
-.inline-btn,
+/*.inline-btn,
 .btn{
    background-color: var(--main-color);
 }
-
+*/
 .inline-delete-btn,
 .delete-btn{
    background-color: var(--red);
@@ -171,14 +171,14 @@ section{
    background-color: var(--blue);
 }
 
-.btn:hover,
+/*.btn:hover,
 .delete-btn:hover,
 .option-btn:hover,
 .inline-btn:hover,
 .inline-delete-btn:hover,
 .inline-option-btn:hover{
    background-color: var(--black);
-}
+}*/
 
 .flex-btn{
    display: flex;
@@ -845,7 +845,33 @@ section{
    text-decoration: underline;
 }
 
+.master {
+   text-align: center;
+   width: 800px;
+   margin: 0 auto;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
 
+
+}
+.master button{
+   width: 300px;
+   margin: 0 auto;
+   color: #000000;
+   padding: 30px;
+   border-radius: 8px;
+   border: 2px solid black;
+   font-size: 25px;
+
+}
+
+#invite{
+   width: 400px;
+
+}
 
 
 
