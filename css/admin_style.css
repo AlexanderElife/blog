@@ -191,7 +191,7 @@ section{
 .form-container form p{
    margin:1rem 0;
    font-size: 2rem;
-   color:var(--light-color);
+   color:var(--black);
 }
 
 .form-container form p span{

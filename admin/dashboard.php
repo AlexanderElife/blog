@@ -40,9 +40,9 @@ if(!isset($admin_id)){
    <div class="box-container">
 
    <div class="box">
-      <h3>welcome!</h3>
+      <h3>Bienvenido!</h3>
       <p><?= $fetch_profile['name']; ?></p>
-      <a href="update_profile.php" class="btn">update profile</a>
+      <a href="update_profile.php" class="btn">Actualizar perfil</a>
    </div>
 
    <div class="box">
@@ -52,8 +52,8 @@ if(!isset($admin_id)){
          $numbers_of_posts = $select_posts->rowCount();
       ?>
       <h3><?= $numbers_of_posts; ?></h3>
-      <p>posts added</p>
-      <a href="add_posts.php" class="btn">add new post</a>
+      <p>Publicación añadida</p>
+      <a href="add_posts.php" class="btn">Añadir nueva publicación</a>
    </div>
 
    <div class="box">
@@ -63,8 +63,8 @@ if(!isset($admin_id)){
          $numbers_of_active_posts = $select_active_posts->rowCount();
       ?>
       <h3><?= $numbers_of_active_posts; ?></h3>
-      <p>active posts</p>
-      <a href="view_posts.php" class="btn">see posts</a>
+      <p>publicación activa</p>
+      <a href="view_posts.php" class="btn">Ver publicación</a>
    </div>
 
    <div class="box">
@@ -74,8 +74,8 @@ if(!isset($admin_id)){
          $numbers_of_deactive_posts = $select_deactive_posts->rowCount();
       ?>
       <h3><?= $numbers_of_deactive_posts; ?></h3>
-      <p>deactive posts</p>
-      <a href="view_posts.php" class="btn">see posts</a>
+      <p>Publicación desactiva</p>
+      <a href="view_posts.php" class="btn">Ver publicación</a>
    </div>
 
    <div class="box">
@@ -85,8 +85,8 @@ if(!isset($admin_id)){
          $numbers_of_users = $select_users->rowCount();
       ?>
       <h3><?= $numbers_of_users; ?></h3>
-      <p>users account</p>
-      <a href="users_accounts.php" class="btn">see users</a>
+      <p>Usuarios de la cuenta/p>
+      <a href="users_accounts.php" class="btn">Ver Usuarios</a>
    </div>
 
    <div class="box">
@@ -96,8 +96,8 @@ if(!isset($admin_id)){
          $numbers_of_admins = $select_admins->rowCount();
       ?>
       <h3><?= $numbers_of_admins; ?></h3>
-      <p>admins account</p>
-      <a href="admin_accounts.php" class="btn">see admins</a>
+      <p>Admin de la cuenta</p>
+      <a href="admin_accounts.php" class="btn">Ver admins</a>
    </div>
    
    <div class="box">
@@ -108,8 +108,8 @@ if(!isset($admin_id)){
          $numbers_of_comments = $select_comments->rowCount();
       ?>
       <h3><?= $numbers_of_comments; ?></h3>
-      <p>comments added</p>
-      <a href="comments.php" class="btn">see comments</a>
+      <p>Comentario añadido</p>
+      <a href="comments.php" class="btn">Ver comentarios</a>
    </div>
 
    <div class="box">
@@ -120,8 +120,8 @@ if(!isset($admin_id)){
          $numbers_of_likes = $select_likes->rowCount();
       ?>
       <h3><?= $numbers_of_likes; ?></h3>
-      <p>total likes</p>
-      <a href="view_posts.php" class="btn">see posts</a>
+      <p>Total de me gusta</p>
+      <a href="view_posts.php" class="btn">Ver publicación</a>
    </div>
 
    </div>

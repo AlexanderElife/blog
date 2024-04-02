@@ -49,21 +49,21 @@ include 'components/like_post.php';
                $count_user_likes->execute([$user_id]);
                $total_user_likes = $count_user_likes->rowCount();
          ?>
-         <p> welcome <span><?= $fetch_profile['name']; ?></span></p>
-         <p>total comments : <span><?= $total_user_comments; ?></span></p>
-         <p>posts liked : <span><?= $total_user_likes; ?></span></p>
-         <a href="update.php" class="btn">update profile</a>
+         <p> Bienvenido: <span><?= $fetch_profile['name']; ?></span></p>
+         <p>Total de comentarios: <span><?= $total_user_comments; ?></span></p>
+         <p>Post me gusta : <span><?= $total_user_likes; ?></span></p>
+         <a href="update.php" class="btn btn-success btn-lg btn-block">Actualizar perfil</a>
          <div class="flex-btn">
-            <a href="user_likes.php" class="option-btn">likes</a>
-            <a href="user_comments.php" class="option-btn">comments</a>
+            <a href="user_likes.php" class="option-btn">Me gusta</a>
+            <a href="user_comments.php" class="option-btn">Comentarios</a>
          </div>
          <?php
             }else{
          ?>
-            <p class="name">login or register!</p>
+            <p class="name">Iniciar sesión o registrarse</p>
             <div class="flex-btn">
-               <a href="login.php" class="option-btn">login</a>
-               <a href="register.php" class="option-btn">register</a>
+               <a href="login.php" class="option-btn">Iniciar Sesión</a>
+               <a href="register.php" class="option-btn">Registrarse</a>
             </div> 
          <?php
           }
@@ -71,24 +71,20 @@ include 'components/like_post.php';
       </div>
 
       <div class="box">
-         <p>categories</p>
+         <p>Categorias</p>
          <div class="flex-box">
-            <a href="category.php?category=nature" class="links">nature</a>
-            <a href="category.php?category=education" class="links">education</a>
-            <a href="category.php?category=business" class="links">business</a>
-            <a href="category.php?category=travel" class="links">travel</a>
-            <a href="category.php?category=news" class="links">news</a>
-            <a href="category.php?category=gaming" class="links">gaming</a>
-            <a href="category.php?category=sports" class="links">sports</a>
-            <a href="category.php?category=design" class="links">design</a>
-            <a href="category.php?category=fashion" class="links">fashion</a>
-            <a href="category.php?category=persional" class="links">persional</a>
-            <a href="all_category.php" class="btn">view all</a>
+            <a href="category.php?category=nature" class="links">Naturaleza</a>
+            <a href="category.php?category=travel" class="links">Viajes</a>
+            <a href="category.php?category=gaming" class="links">Juego</a>
+            <a href="category.php?category=sports" class="links">Deporte</a>
+            <a href="category.php?category=design" class="links">Moda</a>
+            <a href="category.php?category=fashion" class="links">Diseño</a>
+            <a href="all_category.php" class="btn btn-success btn-lg btn-block">Visualizar todo</a>
          </div>
       </div>
 
       <div class="box">
-         <p>authors</p>
+         <p>Autores</p>
          <div class="flex-box">
          <?php
             $select_authors = $conn->prepare("SELECT DISTINCT name FROM `admin` LIMIT 10");
@@ -103,7 +99,7 @@ include 'components/like_post.php';
             echo '<p class="empty">no posts added yet!</p>';
          }
          ?>  
-         <a href="authors.php" class="btn">view all</a>
+         <a href="authors.php" class="btn btn-success btn-lg btn-block">Visualizar todo</a>
          </div>
       </div>
 
@@ -113,7 +109,7 @@ include 'components/like_post.php';
 
 <section class="posts-container">
 
-   <h1 class="heading">latest posts</h1>
+   <h1 class="heading">Ultimas publicaciones</h1>
 
    <div class="box-container">
 
@@ -156,7 +152,7 @@ include 'components/like_post.php';
          ?>
          <div class="post-title"><?= $fetch_posts['title']; ?></div>
          <div class="post-content content-150"><?= $fetch_posts['content']; ?></div>
-         <a href="view_post.php?post_id=<?= $post_id; ?>" class="inline-btn">read more</a>
+         <a href="view_post.php?post_id=<?= $post_id; ?>" class="inline-btn">Leer más</a>
          <a href="category.php?category=<?= $fetch_posts['category']; ?>" class="post-cat"> <i class="fas fa-tag"></i> <span><?= $fetch_posts['category']; ?></span></a>
          <div class="icons">
             <a href="view_post.php?post_id=<?= $post_id; ?>"><i class="fas fa-comment"></i><span>(<?= $total_post_comments; ?>)</span></a>
@@ -167,13 +163,13 @@ include 'components/like_post.php';
       <?php
          }
       }else{
-         echo '<p class="empty">no posts added yet!</p>';
+         echo '<p class="empty" style="color:black;">no se han añadido publicaciones!</p>';
       }
       ?>
    </div>
 
    <div class="more-btn" style="text-align: center; margin-top:1rem;">
-      <a href="posts.php" class="inline-btn">view all posts</a>
+      <a href="posts.php" class="inline-btn">Ver todas las publicaciones</a>
    </div>
 
 </section>

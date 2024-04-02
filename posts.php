@@ -34,7 +34,7 @@ include 'components/like_post.php';
 
 <section class="posts-container">
 
-   <h1 class="heading">latest posts</h1>
+   <h1 class="heading">Ultima publicación</h1>
 
    <div class="box-container">
 
@@ -88,7 +88,7 @@ include 'components/like_post.php';
       <?php
          }
       }else{
-         echo '<p class="empty">no posts added yet!</p>';
+         echo '<p class="empty">¡Aún no se han añadido mensajes!</p>';
       }
       ?>
    </div>

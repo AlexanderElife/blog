@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
       $_SESSION['user_id'] = $row['id'];
       header('location:home.php');
    }else{
-      $message[] = 'incorrect username or password!';
+      $message[] = 'Usuario o contraseña incorrecta';
    }
 
 }
@@ -38,10 +38,11 @@ if(isset($_POST['submit'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>login</title>
+   <title>Login</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
@@ -53,14 +54,14 @@ if(isset($_POST['submit'])){
 <?php include 'components/user_header.php'; ?>
 <!-- header section ends -->
 
-<section class="form-container">
+<section class="form-container ">
 
-   <form action="" method="post">
-      <h3>login now</h3>
-      <input type="email" name="email" required placeholder="enter your email" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="password" name="pass" required placeholder="enter your password" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
-      <input type="submit" value="login now" name="submit" class="btn">
-      <p>don't have an account? <a href="register.php">register now</a></p>
+   <form action="" method="post" style="backdrop-filter: blur(15px);" >
+      <h3>Iniciar sesión</h3>
+      <input type="email" name="email" required placeholder="Correo Electrónico" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="pass" required placeholder="Contraseña" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="submit" value="Acceder" name="submit" class="btn btn-primary btn-lg btn-block">
+      <p> ¿No tiene cuenta? <a style="color: red;" href="register.php">Registrar Ahora</a></p>
    </form>
 
 </section>
